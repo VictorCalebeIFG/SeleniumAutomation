@@ -1,4 +1,8 @@
 name: Run Selenium On GitHub Action
+
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
 jobs:
