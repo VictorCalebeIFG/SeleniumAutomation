@@ -34,6 +34,7 @@ for option in options:
 driver = webdriver.Chrome(options = chrome_options)
 
 driver.get('https://www.facebook.com/marketplace/joaopessoa/search?daysSinceListed=1&query=aluguel%20apartamento&exact=false')
+driver.save_screenshot("screenshot.png")
 print(driver.title)
 with open('./GitHub_Action_Results.txt', 'w') as f:
     f.write(driver.page_source)
