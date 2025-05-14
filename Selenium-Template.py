@@ -15,7 +15,7 @@ chrome_options = webdriver.ChromeOptions()
 options = [
   # Define window size here
    "--window-size=1200,1200",
-    "--ignore-certificate-errors"
+    "--ignore-certificate-errors",
  
     "--headless",
     "--disable-gpu",
@@ -36,5 +36,5 @@ driver = webdriver.Chrome(options = chrome_options)
 driver.get('https://www.facebook.com/marketplace/joaopessoa/search?daysSinceListed=1&query=aluguel%20apartamento&exact=false')
 print(driver.title)
 with open('./GitHub_Action_Results.txt', 'w') as f:
-    f.write(f"This was written with a GitHub action {driver.title}")
+    f.write(driver.page_source)
 
